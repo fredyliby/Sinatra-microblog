@@ -1,11 +1,12 @@
 class User < ActiveRecord::Base
- has_many:posts
-
+ has_many :posts
+ has_one :profile
 end
 
-class posts < ActiveRecord::Base
-	belongs_to:User
+class Post  < ActiveRecord::Base
+	belongs_to :user
 end
 
-class profile <ActiveRecord::Base
-	belongs_to:User
+class Profile <ActiveRecord::Base
+	belongs_to :user
+end

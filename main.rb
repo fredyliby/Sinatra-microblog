@@ -17,13 +17,13 @@ get '/login' do
 end
 
 post '/login' do
-puts User.create
-	end
+	puts User.create
+end
 	
 	
 
-get 'signup' do
-	puts User.post
+get '/signup' do
+	puts User.all
 
 	erb:home
 end
