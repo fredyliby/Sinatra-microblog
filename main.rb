@@ -2,7 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'rack-flash'
 
-set :database, "sqlite3:blogdb.sqlite3"
+configure(:development){set :database, "sqlite3:blogdb.sqlite3"}
 require './models'
 
 
