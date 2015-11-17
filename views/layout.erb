@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title><%= @title %></title>
-</head>
+   <head>
+	   <title><%= @title %></title>
+    </head>
 <body>
-	<%= yield %>
+	<nav>
+		<ul>			
+			<a href="/show"><li>Blog Feed</li></a>
+
+			<a href="/"><li>Sign In or sign Up!</li></a>
+
+			<a href="/create_blog"><li>Create a blog!</li></a>
+
+			<a href="/profile"><li>Profile</li></a>
+
+			<a href="/sign-out"><li>Sign out</li></a>
+
+			<a href="/destroy"><li>Delete account</li></a>			
+		</ul>
+	</nav>
+		<% if flash[:notice] %>     
+	<div class="flash notice">       
+		<%=flash[:notice] %>     
+	</div>   
+	<% end %> 
+	  <% if flash[:alert] %>       
+	<div class="flash alert">       
+		<%=flash[:alert] %>     
+	</div>   
+	<% end %>   
+	<%=yield %> 
 </body>
 </html>
+
+
+
